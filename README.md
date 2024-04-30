@@ -2,26 +2,19 @@
 
 ## AIM
 The aim is to use Monte Carlo Control in a specific environment to learn an optimal policy, estimate state-action values, iteratively improve the policy, and optimize decision-making through a functional reinforcement learning algorithm.
-
 ## PROBLEM STATEMENT
 Monte Carlo Control is a reinforcement learning method, to figure out the best actions for different situations in an environment. The provided code is meant to do this, but it's currently having issues with variables and functions.
-
 ## MONTE CARLO CONTROL ALGORITHM
 ### Step 1:
 Initialize Q-values, state-value function, and the policy.
-
 ### Step 2:
 Interact with the environment to collect episodes using the current policy.
-
 ### Step 3:
 For each time step within episodes, calculate returns (cumulative rewards) and update Q-values.
-
 ### Step 4:
 Update the policy based on the improved Q-values.
-
 ### Step 5:
 Repeat steps 2-4 for a specified number of episodes or until convergence.
-
 ### Step 6:
 Return the optimal Q-values, state-value function, and policy.
 
@@ -31,7 +24,6 @@ Developed By: Kamesh D
 Register Number:212222240043
 ```
 ```py
-
 from numpy.lib.function_base import select
 from collections import defaultdict
 def mc_control(env, gamma=1.0, init_alpha=0.5, min_alpha=0.01, alpha_decay_ratio=0.5,
@@ -65,11 +57,7 @@ def mc_control(env, gamma=1.0, init_alpha=0.5, min_alpha=0.01, alpha_decay_ratio
         pi_track.append(pi.copy)
     return Q, V, pi
 ```
-
 ## OUTPUT:
-
 ![Screenshot 2024-04-30 133940](https://github.com/KameshLeVI/monte-carlo-control/assets/120780633/db5b4447-68f3-4de2-9631-61f0a7781246)
-
-
 ## RESULT:
 Monte Carlo Control successfully learned an optimal policy for the specified environment.
